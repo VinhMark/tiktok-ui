@@ -1,13 +1,19 @@
 @import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 // dat bien
 :root {
   --primay: #fe2c55;
+
+  // Default layout
+  --default-layout-header-height: 60px;
+  --default-layout-width: 1150px;
 }
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -15,9 +21,8 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   font-family: "Poppins", sans-serif;
-  //size deafault browser
+  //size default browser
   font-size: 1.6rem;
   line-height: 1.5rem;
 }
