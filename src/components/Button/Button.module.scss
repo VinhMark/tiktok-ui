@@ -1,0 +1,96 @@
+.wrapper {
+  min-width: 100px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 100px;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 16px;
+  border: 1px solid transparent;
+  background-color: var(--white);
+
+  + .wrapper {
+    margin-left: 8px;
+  }
+
+  &.disable {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .left-icon + .title,
+  .title + .right-icon {
+    margin-left: 8px;
+  }
+}
+
+// Button type
+.rounded {
+  border-radius: 999px;
+  background: none;
+  color: rgba(22, 24, 35, 0.75);
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 90px;
+  padding: 0 8px;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  background-color: rgba(255, 255, 255, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+  transform-origin: right bottom;
+  transform: none;
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.2);
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      var(--primary);
+    border-color: var(--primary);
+  }
+}
+.outline {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 1);
+  
+  &:hover {
+    border-color: var(--primary);
+    background-color: rgba(254, 44, 85, 0.06);
+  }
+}
+
+.text {
+  padding: 0;
+  min-width: 50px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Button size
+.small {
+  min-width: 88px;
+  min-height: 28px;
+  padding: 0 10px;
+}
+
+.large {
+  min-width: 168px;
+  padding: 12px 8px;
+  width: 100%;
+}
