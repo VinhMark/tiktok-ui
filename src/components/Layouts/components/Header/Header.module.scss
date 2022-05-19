@@ -1,12 +1,85 @@
 .wrapper {
-    width: 100%;
-    height: var(--default-layout-header-height, 60px);
-    box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
-    display: flex;
-    justify-content: center;
+  --search-border-radius: 92px;
+  --search-height: 46px;
+
+  width: 100%;
+  height: var(--default-layout-header-height, 60px);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
+  display: flex;
+  justify-content: center;
 }
 
 .inner {
-    height: 100%;
-    width: var(--default-layout-width);
+  height: 100%;
+  width: var(--default-layout-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .search {
+    width: 361px;
+    height: var(--search-height);
+    background-color: rgba(22, 24, 35, 0.06);
+    padding: 12px 16px;
+    border-radius: var(--search-border-radius);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:focus-within {
+      outline: rgba(22, 24, 35, 0.34) solid 1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: calc(var(--search-height) - 18px);
+      width: 1px;
+      left: 307px;
+      background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    input {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      background: transparent;
+      caret-color: red;
+      width: 252px;
+      appearance: text-field;
+
+      &:not(:placeholder-shown) ~ .clear {
+        opacity: 1;
+      }
+    }
+
+    .clear,
+    .loading {
+      width: 16px;
+      height: 16px;
+      margin: 0 12px;
+      color: rgba(22, 24, 35, 0.34);
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .search-btn {
+      width: 52px;
+      height: 46px;
+      color: rgba(22, 24, 35, 0.34);
+      padding: 11px 16px 11px 12px;
+      margin: -12px -16px;
+      cursor: pointer;
+      margin-left: 0;
+      font-size: 18.84px;
+      &:hover {
+        background: rgba(22, 24, 35, 0.03);
+      }
+      &:active {
+        background: rgba(22, 24, 35, 0.06);
+      }
+    }
+  }
 }

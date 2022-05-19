@@ -4,6 +4,8 @@
 // dat bien
 :root {
   --primay: #fe2c55;
+  --black: #000;
+  --text-color: #333;
 
   // Default layout
   --default-layout-header-height: 60px;
@@ -25,4 +27,15 @@ body {
   //size default browser
   font-size: 1.6rem;
   line-height: 1.5rem;
+}
+
+button, input, [tabindex] {
+  outline: none;
+  border: none;
+  color: var(--text-color);
+}
+
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
 }
