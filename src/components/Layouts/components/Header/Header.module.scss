@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 24px 0 20px;
 
   .search {
     width: 361px;
@@ -101,5 +102,23 @@
 
   .actions {
     display: flex;
+    align-items: center;
+  }
+
+  .more-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0 4px;
+    margin-left: 16px;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  // menu-items
+  .menu-items {
+    min-width: 224px;
+
   }
 }
