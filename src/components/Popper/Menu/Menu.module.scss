@@ -14,4 +14,30 @@
       background-color: rgba(22, 24, 35, 0.03);
     }
   }
+
+  // Header menu
+  .header {
+      display: flex;
+      height: 50px;
+      align-items: center;
+      margin-top: -8px;
+
+      .back-btn {
+          width: 48px;
+          height: inherit;
+          cursor: pointer;
+          color: rgb(22, 24, 35);
+          background-color: transparent;
+          font-size: 18px;
+      }
+
+      &-title {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+  }
 }
